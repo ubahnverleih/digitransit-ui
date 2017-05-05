@@ -34,7 +34,7 @@ function mapToSlider(value, arr) {
 
 const WALKBOARDCOST_MIN = 1;
 const WALKBOARDCOST_DEFAULT = 600;
-const WALKBOARDCOST_MAX = 3600;
+const WALKBOARDCOST_MAX = 6000;
 
 // Get default settings
 const defaultSettings = {
