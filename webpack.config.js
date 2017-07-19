@@ -5,8 +5,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const autoprefixer = require('autoprefixer');
-const csswring = require('csswring');
 const StatsPlugin = require('stats-webpack-plugin');
 // const OptimizeJsPlugin = require('optimize-js-plugin');
 const OfflinePlugin = require('offline-plugin');
@@ -227,12 +225,6 @@ function getPluginsConfig(env) {
       }),
       new webpack.NamedChunksPlugin(),
       new webpack.NamedModulesPlugin(),
-      new webpack.LoaderOptionsPlugin({
-        debug: true,
-        options: {
-          postcss: () => [autoprefixer({ browsers: prodBrowsers })],
-        },
-      }),
       new webpack.NoEmitOnErrorsPlugin(),
     ];
   }
@@ -249,13 +241,6 @@ function getPluginsConfig(env) {
     new webpack.NamedChunksPlugin(),
     new webpack.NamedModulesPlugin(),
     new NameAllModulesPlugin(),
-    new webpack.LoaderOptionsPlugin({
-      debug: false,
-      minimize: true,
-      options: {
-        postcss: () => [autoprefixer({ browsers: prodBrowsers }), csswring],
-      },
-    }),
     getSourceMapPlugin(/\.(js)($|\?)/i, '/js/'),
     getSourceMapPlugin(/\.(css)($|\?)/i, '/css/'),
     new webpack.optimize.CommonsChunkPlugin({
