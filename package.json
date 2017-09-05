@@ -158,7 +158,7 @@
     "selenium-webdriver": "3.5.0",
     "stats-webpack-plugin": "0.6.1",
     "style-loader": "0.18.2",
-    "stylelint": "7.8.0",
+    "stylelint": "8.1.1",
     "stylelint-scss": "1.4.1",
     "url-loader": "0.5.8",
     "webpack": "3.4.1",
